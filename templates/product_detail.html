@@ -1,0 +1,21 @@
+{% extends 'main.html' %}
+
+{% block title %}
+	{{product.name }}
+{% endblock %}
+
+{% block body %}
+	<div class="container mt-5">
+		<h1 class="h3 mb-3 fw-normal text-center">{{ product.name }}</h1>
+
+		<div class="alert alert-info">
+			<h2 class="h3 mb-3 fw-normal">{{ product.name }}</h2>
+			<p>{{ product.info }}</p>
+			<p><b>{{ product.price }}</b></p>
+			<form method="post">
+				<button class="btn btn-warning">Add to basket</button>
+			</form>
+		</div>
+
+	</div>
+{% endblock %}

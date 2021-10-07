@@ -1,0 +1,33 @@
+{% extends 'main.html' %}
+
+{% block title %}
+	Edit product
+{% endblock %}
+
+{% block body %}
+
+    <div class="py-5">
+    	<h2 class="h3 mb-3 fw-normal text-center">Edit product</h2>
+    	<form method="post">
+    		
+    		<div>
+    			<label for="productName" class="form-label">Product name</label>
+    			<input type="text" name="productName" id="productName" class="form-control" value="{{ product.name }}">
+    		</div>
+
+    		<div>
+    			<label for="productInfo" class="form-label">Product info</label>
+    			<textarea name="productInfo" id="productInfo" class="form-control">{{ product.info }}</textarea>
+    		</div>
+
+    		<div>
+    			<label for="productPrice" class="form-label">Product price</label>
+    			<input type="text" name="productPrice" id="productPrice" class="form-control" value="{{ product.price }}">
+    		</div>
+    		<hr class="my-4">
+    		<input type="submit" class="w-100 btn btn-primary btn-lg" value="Accept">
+
+    	</form>
+    </div>
+
+{% endblock %}

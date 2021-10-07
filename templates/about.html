@@ -1,0 +1,50 @@
+{% extends 'main.html' %}
+
+{% block title %}
+    About us
+
+{% endblock %}
+
+{% block body %}
+    <style>
+            p.dline {
+            line-height: 2;
+            }
+        </style>
+
+    <style>
+        .thumb img  {
+        border: 2px solid #255255255; /* Рамка вокруг фотографии */
+        padding: 15px; /* Расстояние от картинки до рамки */
+        background: #255255255; /* Цвет фона */
+        margin-top: 25px; /* Отступ сверху */
+        margin-right: 10px; /* Отступ справа */
+        margin-bottom: 10px; /* Отступ снизу */
+        }
+    </style>
+
+    <div class="py-5">
+        <h1 class="h3 mb-3 fw-normal text-center">About shop</h1>
+    </div>
+
+    <div class="container">
+        <p class="dline">
+            This site was developed by Rostislav Sharuev as part of his study of the Flask framework for the Python programming language and HTML markup language. <br>
+            In this site, the technologies of the Flask framework, the HTML page markup language, were used.
+            The basis of the page layout is made up of ready-made HTML templates from the Bootstrap resource: <br>
+            <a class="me-3 py-2 text-dark" href="https://getbootstrap.com/docs/5.1/examples/">
+                Link to Bootstrap (pushable) </a><br>
+            and a ready-made CSS solution: <br>
+            <a class="me-3 py-2 text-dark" href="https://www.bootstrapcdn.com/">
+                Link to Bootstrap cdn (pushable) </a>
+        </p>
+    </div>
+
+    <div class="container text-center">
+        <p class="thumb">
+            <img src="/static/img/Bootstrap_logo.svg.png" height="100">
+            <img src="/static/img/Python_logo.svg.png" height="100">
+            <img src="/static/img/Flask_logo.svg.png" height="100">
+        </p>
+    </div>
+{% endblock %}

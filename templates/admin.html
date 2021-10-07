@@ -1,0 +1,48 @@
+{% extends 'main.html' %}
+
+{% block title %}
+	Admins page
+{% endblock %}
+
+{% block body %}
+
+    <div class="py-5">
+    	<h2 class="h3 mb-3 fw-normal text-center">Add new product</h2>
+    	<form method="post">
+    		
+    		<div>
+    			<label for="productName" class="form-label">Product name</label>
+    			<input type="text" name="productName" id="productName" class="form-control">
+    		</div>
+
+    		<div>
+    			<label for="productInfo" class="form-label">Product info</label>
+    			<textarea name="productInfo" id="productInfo" class="form-control"></textarea>
+    		</div>
+
+    		<div>
+    			<label for="productPrice" class="form-label">Product price</label>
+    			<input type="text" name="productPrice" id="productPrice" class="form-control">
+    		</div>
+    		<hr class="my-4">
+    		<input type="submit" class="w-100 btn btn-primary btn-lg" value="Add new product">
+
+    	</form>
+    </div>
+
+    <div class="container mt-5">
+        <h1 class="h3 mb-3 fw-normal text-center">Products in stock</h1>
+
+        {% for element in products %}
+            <div class="alert alert-info">
+                <h2 class="h3 mb-3 fw-normal">{{ element.name }}</h2>
+                <p>{{ element.info }}</p>
+                <p><b>{{ element.price }}</b></p>
+                <a href="/shop/{{ element.id }}/delete" class="btn btn-danger">Delete product</a>
+                <a href="/shop/{{ element.id }}/edit" class="btn btn-success">Edit product</a>
+            </div>
+        {% endfor %}
+    </div>
+
+
+{% endblock %}
